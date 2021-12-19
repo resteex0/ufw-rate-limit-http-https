@@ -21,6 +21,12 @@
 -A ufw-before-input -p tcp --dport 80 -i any -m state --state NEW -m recent --update --seconds 2 --hitcount 20 -j DROP
 -A ufw-before-input -p tcp --dport 443 -i any -m state --state NEW -m recent --set
 -A ufw-before-input -p tcp --dport 443 -i any -m state --state NEW -m recent --update --seconds 2 --hitcount 20 -j DROP
+-A ufw-before-forward -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A ufw-before-forward -s 10.8.0.0/24 -o any -j ACCEPT
+-A ufw-before-forward -j REJECT
+*nat
+:POSTROUTING ACCEPT [0:0]
+-A POSTROUTING -s 10.8.0.0/24 -o any -j SNAT --to-source any
 
 # allow all on loopback
 -A ufw-before-input -i lo -j ACCEPT
