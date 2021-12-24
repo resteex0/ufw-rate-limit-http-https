@@ -19,6 +19,7 @@ Add these lines to /etc/ufw/before.rules after<br>
 <code># End Custom UFW by clusterednetworks</code><br>
 
 2. Reload the filewall rules<br>
+<code>ufw logging on</code><br>
 <code>sudo ufw reload</code><br>
 <code>sudo ufw limit 1194/udp</code><br>
 <code>sudo ufw status numbered</code><br>
