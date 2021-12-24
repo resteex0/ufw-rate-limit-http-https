@@ -25,4 +25,5 @@ Add these lines to /etc/ufw/before.rules after<br>
 <code>sudo ufw enable</code><br>
 <code>sudo ufw status numbered</code><br>
 <code>iptables-save>firewall.out</code><br>
-<code>iptables-restore<firewall.out</code>
+<code>iptables-restore<firewall.out</code><br>
+<code>sudo apt-get install iptables-persistent</code>
