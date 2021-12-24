@@ -22,4 +22,5 @@ Add these lines to /etc/ufw/before.rules after<br>
 <code>sudo ufw reload</code><br>
 <code>sudo ufw limit 1194/udp</code><br>
 <code>sudo ufw status numbered</code><br>
-<code>iptables-save>firewall.out</code>
+<code>iptables-save>firewall.out</code><br>
+<code>iptables-restore<firewall.out</code>
