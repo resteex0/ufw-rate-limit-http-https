@@ -49,8 +49,8 @@ example of delete all iptables rules<br>
 <code>ip6tables -t nat -F</code><br>
 <code>ip6tables -t mangle -F</code><br>
 <code>ip6tables -F</code><br>
-ip6tables -X
+<code>ip6tables -X</code><br>
 
-iptables -nvL
+<code>iptables -nvL</code>
 
 
