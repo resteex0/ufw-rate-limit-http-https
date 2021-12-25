@@ -34,20 +34,21 @@ examples of delete some of iptables rules<br>
 <code>iptables -t nat -F<code>
   
 example of delete all iptables rules<br>
+  
 <code>iptables -P INPUT ACCEPT</code><br>
 <code>iptables -P FORWARD ACCEPT</code><br>
 <code>iptables -P OUTPUT ACCEPT</code><br>
 <code>iptables -t nat -F</code><br>
-iptables -t mangle -F
-iptables -F
-iptables -X
+<code>iptables -t mangle -F</code><br>
+<code>iptables -F</code><br>
+<code>iptables -X</code><br>
 
-ip6tables -P INPUT ACCEPT
-ip6tables -P FORWARD ACCEPT
-ip6tables -P OUTPUT ACCEPT
-ip6tables -t nat -F
-ip6tables -t mangle -F
-ip6tables -F
+<code>ip6tables -P INPUT ACCEPT</code><br>
+<code>ip6tables -P FORWARD ACCEPT</code><br>
+<code>ip6tables -P OUTPUT ACCEPT</code><br>
+<code>ip6tables -t nat -F</code><br>
+<code>ip6tables -t mangle -F</code><br>
+<code>ip6tables -F</code><br>
 ip6tables -X
 
 iptables -nvL
