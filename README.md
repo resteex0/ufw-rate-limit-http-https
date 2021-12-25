@@ -28,5 +28,7 @@ Add these lines to /etc/ufw/before.rules after<br>
 <code>iptables-restore<firewall.out</code><br>
 <code>sudo apt-get install iptables-persistent</code><br>
 <code>iptables-save|grep -i 'google'</code><br>
+  
+examples of delete rules
 <code>iptables --delete INPUT -p tcp -m tcp --dport 80 -m string --string "google.com" --algo kmp --to 65535 -j DROP</code><br>
 <code>iptables -t nat -F<code>
