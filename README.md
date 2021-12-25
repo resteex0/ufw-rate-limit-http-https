@@ -29,6 +29,27 @@ Add these lines to /etc/ufw/before.rules after<br>
 <code>sudo apt-get install iptables-persistent</code><br>
 <code>iptables-save|grep -i 'google'</code><br>
   
-examples of delete rules<br>
+examples of delete some of iptables rules<br>
 <code>iptables --delete INPUT -p tcp -m tcp --dport 80 -m string --string "google.com" --algo kmp --to 65535 -j DROP</code><br>
 <code>iptables -t nat -F<code>
+  
+example of delete all iptables rules<br>
+<code>iptables -P INPUT ACCEPT</code><br>
+<code>iptables -P FORWARD ACCEPT</code><br>
+<code>iptables -P OUTPUT ACCEPT</code><br>
+<code>iptables -t nat -F</code><br>
+iptables -t mangle -F
+iptables -F
+iptables -X
+
+ip6tables -P INPUT ACCEPT
+ip6tables -P FORWARD ACCEPT
+ip6tables -P OUTPUT ACCEPT
+ip6tables -t nat -F
+ip6tables -t mangle -F
+ip6tables -F
+ip6tables -X
+
+iptables -nvL
+
+
