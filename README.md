@@ -31,9 +31,9 @@ Add these lines to /etc/ufw/before.rules after<br>
   
 examples of delete some of iptables rules<br>
 <code>iptables --delete INPUT -p tcp -m tcp --dport 80 -m string --string "google.com" --algo kmp --to 65535 -j DROP</code><br>
-<code>iptables -t nat -F<code><br>
+<code>iptables -t nat -F<code>
   
- example of delete all iptables rules<br>
+ example of delete all iptables rules
   
 <code>iptables -P INPUT ACCEPT</code><br>
 <code>iptables -P FORWARD ACCEPT</code><br>
