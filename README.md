@@ -53,4 +53,7 @@ examples of delete some of iptables rules<br>
 
 <code>iptables -nvL</code>
 
-
+iptables honeyports<br>
+<code>iptables -t nat -A PREROUTING -p tcp --dport 1:65534 -j REDIRECT --to-ports 10000</code><br>
+<code>iptables-save|grep -i '10000'</code><br>
+<code>iptables -t nat -F</code>
