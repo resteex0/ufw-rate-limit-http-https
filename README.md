@@ -57,3 +57,10 @@ iptables honeyports<br>
 <code>iptables -t nat -A PREROUTING -p tcp --dport 1:65534 -j REDIRECT --to-ports 10000</code><br>
 <code>iptables-save|grep -i '10000'</code><br>
 <code>iptables -t nat -F</code>
+
+some iptables command for helping<br>
+<code>sudo iptables -I INPUT -t filter -s www.facebook.com -j DROP</code>
+<code>iptables -L INPUT</code>
+<code>iptables -D INPUT 1</code>
+<code>iptables-save > iptables.dump</code>
+<code>iptables-restore < iptables.dump</code>
