@@ -59,8 +59,8 @@ iptables honeyports<br>
 <code>iptables -t nat -F</code>
 
 some iptables command for helping<br>
-<code>sudo iptables -I INPUT -t filter -s www.facebook.com -j DROP</code>
-<code>iptables -L INPUT</code>
-<code>iptables -D INPUT 1</code>
-<code>iptables-save > iptables.dump</code>
-<code>iptables-restore < iptables.dump</code>
+<code>sudo iptables -I INPUT -t filter -s www.facebook.com -j DROP</code><br>
+<code>iptables -L INPUT</code><br>
+<code>iptables -D INPUT 1</code><br>
+<code>iptables-save > iptables.dump</code><br>
+<code>iptables-restore < iptables.dump</code><br>
